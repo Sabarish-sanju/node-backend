@@ -1,0 +1,184 @@
+.container {
+  width: 90%;
+  margin: 40px auto;
+  font-family: "Inter", sans-serif;
+}
+
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.add-btn {
+  background: #2563eb;
+  padding: 10px 18px;
+  border: none;
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: 0.2s;
+}
+
+.add-btn:hover {
+  background: #1e4fc9;
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+thead {
+  background: #1e40af;
+  color: white;
+}
+
+th,
+td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: left;
+}
+
+tr:hover {
+  background: #68b0f9;
+}
+
+.edit-btn,
+.delete-btn {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-right: 5px;
+  color: #fff;
+}
+
+.edit-btn {
+  background: #0891b2;
+}
+
+.edit-btn:hover {
+  background: #0e7490;
+}
+
+.delete-btn {
+  background: #dc2626;
+}
+
+.delete-btn:hover {
+  background: #b91c1c;
+}
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.3s;
+}
+
+.modal {
+  width: 420px;
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  position: relative;
+  animation: popIn 0.3s;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes popIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Form */
+.form-content {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  gap: 12px; /* Consistent spacing between form fields */
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column; /* Stack input + error message */
+}
+
+.form-content input,
+.form-content select {
+  width: 100%; /* Full width of modal */
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 15px;
+  box-sizing: border-box; /* Include padding in width */
+}
+
+/* Red border for invalid inputs */
+.input-error {
+  border: 2px solid red;
+}
+
+/* Inline error message */
+.error-msg {
+  color: red;
+  font-size: 0.85rem;
+  margin-top: 4px;
+  display: block;
+}
+
+.submit-btn {
+  padding: 12px;
+  background: #16a34a;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.submit-btn:hover {
+  background: #15803d;
+}
