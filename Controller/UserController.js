@@ -97,10 +97,10 @@ const deleteUser = async (req, res) => {
 };
 
 const LoginUser = async (req, res) => {
-  const { name, password } = req.body;
+  const { email, password } = req.body;
 
   try {
-    const user = await User.findOne({ name });
+    const user = await User.findOne({ email });
 
     if (!user) {
       return res.status(401).json({ message: " unable to find user" });
